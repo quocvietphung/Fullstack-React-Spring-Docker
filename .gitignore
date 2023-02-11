@@ -4,3 +4,4 @@ mvnw
 mvnw.cmd
 target/
 .gitattributes
+.DS_Store
