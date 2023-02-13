@@ -1,12 +1,23 @@
 version: '3'
 services:
+  java-spring:
+    build:
+      context: ./java-spring
+    ports:
+      - "8080:8080"
+    networks:
+      - spring-boot-react-network
+    restart: always
+
   react-app:
     build:
       context: ./react-app
     ports:
       - 3000:3000
-  java-spring:
-    build:
-      context: ./java-spring
-    ports:
-      - 8080:8080
+    networks:
+      - spring-boot-react-network
+    restart: always
+
+networks:
+  spring-boot-react-network:
+    driver: bridge
