@@ -6,3 +6,7 @@ target/
 .gitattributes
 .DS_Store
 .vscode
+
+react-app/package-lock.json
+java-spring/demo.iml
+java-spring/java-spring.iml
